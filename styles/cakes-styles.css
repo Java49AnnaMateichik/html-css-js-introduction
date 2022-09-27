@@ -1,22 +1,42 @@
+@font-face {
+    font-family: lakeshore;
+    src: url("fonts/LAKESHOR-webfont.svg");
+    src: url("fonts/LAKESHOR-webfont.woff");
+}
+:root {
+    --thumbnails-img-width: 11vw;
+    --thumbnails-img-height: 6vw;
+    --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.55)
+}
+body, html {
+    height: 100%;
+}
 body {
+   
     display: flex;    
     flex-direction: column;
     background-color: rgb(225, 171, 236);
-    }
+    margin: 0;
+}
     .logo  {
     font-size: 2em;
     background-color: rgb(237, 217, 104); 
     display: block;
     text-align: center;
+    font-family: lakeshore;
+    text-transform: uppercase;
     }
     .main-class {
-    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-grow: 1;
     }
     .details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 2.5vh;
+    margin-bottom: 10vh;
     }
     .details-image {
     width: 70vw;
@@ -38,25 +58,50 @@ body {
     
     }
     .thumbnails-item {
-    overflow-y: hidden;
-    width: 20vw;
-    height: 20vw;
+    max-width: var(--thumbnails-img-width);
+    min-height: calc(var(--thumbnails-img-height) + var(--thumbnails-title-height));
     margin-top: 2.5vh;
     border: solid 1px black;
     border-radius: 25%;
+    overflow: hidden;
     }
     .thumbnails-image {
-    width: 20vw;
-    height: 15vw;
+    width: var(--thumbnails-img-width);
+    height: var(--thumbnails-img-height);
     display: block;
     }
     .thumbnails-title {
-        display: block; 
-        text-align: center;
-        height: 5vw;
+        display:  block; 
+        text-align:center;
+        height: var(--thumbnails-title-height); 
         background-color: rgb(248, 242, 213);
+       
+       
     }
     .thumbnails-anchor {
        text-decoration: none;
        color: black;
     }
+    @media (min-width: 560px) {
+        .thumbnails-list {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            max-height: 80vh;
+            order: -1;
+            justify-content: flex-start;
+        }
+        .main-class {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .details-image {
+            width: 33vw;
+            height: 30vw;
+            margin-top: 10vh;
+        }
+        .details-container{
+            height: 70vh;
+        }
+        
+        }
+    
