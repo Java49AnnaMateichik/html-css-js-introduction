@@ -104,4 +104,27 @@ body {
         }
         
         }
+        @media (min-width: 900px) {
+            .thumbnails-list {
+                flex-direction: column;
+                flex-wrap: nowrap;
+                max-height: 80vh;
+                order: -1;
+                justify-content: flex-start;
+            }
+            .main-class {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            .details-image {
+                width: 45vw;
+                height: 40vw;
+                justify-content: space-around;
+            }
+            .details-title{
+                display: block;
+                font-size: 4vh;
+            }
+            
+            }
     
