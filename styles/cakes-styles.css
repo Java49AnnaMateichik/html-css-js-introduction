@@ -4,9 +4,9 @@
     src: url("fonts/LAKESHOR-webfont.woff");
 }
 :root {
-    --thumbnails-img-width: 11vw;
-    --thumbnails-img-height: 6vw;
-    --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.55)
+    --thumbnails-img-width: 20vw;
+    --thumbnails-img-height: 15vw;
+    --thumbnails-title-height: calc(var(--thumbnails-img-height) * 0.33)
 }
 body, html {
     height: 100%;
@@ -25,6 +25,8 @@ body {
     text-align: center;
     font-family: lakeshore;
     text-transform: uppercase;
+    letter-spacing: 5px;
+
     }
     .main-class {
         display: flex;
@@ -39,8 +41,9 @@ body {
     margin-bottom: 10vh;
     }
     .details-image {
-    width: 70vw;
-    height: 60vw;
+   
+    width: 90vw;
+    height: 70vw;    
     border-radius: 25%;
     }
     .details-title {
@@ -83,10 +86,23 @@ body {
        color: black;
     }
     @media (min-width: 560px) {
+        
+    :root {
+        --thumbnails-img-width: 12vw;
+        --thumbnails-img-height: 8vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.25)
+    }
+    
+
+    .logo {
+        font-size: 1.8em;
+    }
+
+
         .thumbnails-list {
             flex-direction: column;
             flex-wrap: nowrap;
-            max-height: 80vh;
+            max-height: 75vh;
             order: -1;
             justify-content: flex-start;
         }
@@ -95,35 +111,45 @@ body {
             justify-content: space-around;
         }
         .details-image {
-            width: 33vw;
-            height: 30vw;
-            margin-top: 10vh;
+        width: 45vw;
+        height: 38vw;
+
         }
         .details-container{
-            height: 70vh;
+            
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+
+            
         }
         
         }
         @media (min-width: 900px) {
             .thumbnails-list {
-                flex-direction: column;
-                flex-wrap: nowrap;
-                max-height: 80vh;
-                order: -1;
-                justify-content: flex-start;
+                padding-right: 2vw;
+                margin-top: 2.5vh;
+                max-height: 86vh;
+    
             }
-            .main-class {
-                flex-direction: row;
-                justify-content: space-around;
+
+            .thumbnails-title {
+                font-size: 1.5em;
             }
+    
+            .details-container {
+                margin-top: 5vh;
+                margin-right: 5vw;
+            }
+    
             .details-image {
                 width: 45vw;
-                height: 40vw;
+                height: 35vw;
                 justify-content: space-around;
             }
             .details-title{
-                display: block;
-                font-size: 4vh;
+               
+                font-size: 1.5em;
             }
             
             }
