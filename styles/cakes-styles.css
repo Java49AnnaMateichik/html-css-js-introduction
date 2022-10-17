@@ -123,6 +123,7 @@ body {
             order: -1;
             justify-content: flex-start;
         }
+        
         .main-class {
             flex-direction: row;
             justify-content: space-around;
