@@ -58,8 +58,9 @@ body {
     font-style: italic;
     background-color: rgb(255, 204, 205);
     position: absolute;
-    left: 10vw;
-    bottom: 10vw;
+    font-size: 2em;
+    left:6px;
+    bottom: 10px;
     }
     .thumbnails-list {
     list-style: none;
@@ -131,6 +132,7 @@ body {
         height: 38vw;
 
         }
+       
         .details-container{
             
         justify-content: center;
