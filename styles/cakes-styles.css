@@ -39,12 +39,28 @@ body {
         justify-content: center;
         flex-grow: 1;
     }
+    .main-class.hidden {
+        --thumbnails-img-width: 35vw;
+        --thumbnails-img-height: 25vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33) 
+    }
     .details-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10vh;
-    position: relative;
+    
+    }
+    .hidden .details-container {
+        display: none;
+    }
+    .details-frame {
+        position: relative;
+    }
+    .hide-button {
+        position: absolute;
+        top: 3vh;
+        right: 3vw;
     }
     .details-image {
    
@@ -72,6 +88,10 @@ body {
     justify-content: space-around;
     padding-left: 0;
     
+    }
+    .hidden .thumbnails-list {
+        max-height: 80vh;
+        margin-bottom: 5vh;
     }
     .thumbnails-item {
     max-width: var(--thumbnails-img-width);
@@ -115,26 +135,37 @@ body {
         font-size: 1.8em;
     }
 
-
-        .thumbnails-list {
+    .main-class {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    .main-class.hidden {
+        --thumbnails-img-width: 20vw;
+        --thumbnails-img-height: 15vw;
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33) 
+    }
+    .thumbnails-list {
             flex-direction: column;
             flex-wrap: nowrap;
             max-height: 75vh;
             order: -1;
             justify-content: flex-start;
+            padding-right: 2vw;
+
         }
-        
-        .main-class {
-            flex-direction: row;
+     .hidden .thumbnails-list {
+            flex-wrap: wrap;
             justify-content: space-around;
+            flex-direction: row;
         }
-        .details-image {
+       
+    .details-image {
         width: 45vw;
         height: 38vw;
 
         }
        
-        .details-container{
+    .details-container{
             
         justify-content: center;
         align-items: center;
@@ -145,13 +176,13 @@ body {
         
         }
         @media (min-width: 900px) {
-            .thumbnails-list {
-                padding-right: 2vw;
+           /* .thumbnails-list {
+                
                 margin-top: 2.5vh;
                 max-height: 86vh;
     
             }
-
+*/
             .thumbnails-title {
                 font-size: 1.5em;
             }
