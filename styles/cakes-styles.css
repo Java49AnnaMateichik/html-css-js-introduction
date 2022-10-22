@@ -142,7 +142,7 @@ body {
     .main-class.hidden {
         --thumbnails-img-width: 20vw;
         --thumbnails-img-height: 15vw;
-        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.33) 
+        --thumbnails-title-height: calc(var(--thumbnails-img-height)* 0.2) 
     }
     .thumbnails-list {
             flex-direction: column;
@@ -157,7 +157,9 @@ body {
             flex-wrap: wrap;
             justify-content: space-around;
             flex-direction: row;
+           
         }
+       
        
     .details-image {
         width: 45vw;
