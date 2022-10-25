@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/cakes-styles.css">
     <title> Java49 Anna Mateichik</title>
+    
 </head>
 <body>
   <header class="logo">
@@ -14,82 +15,74 @@
   <main class="main-class hidden">
     <section class="details-container">
         <div class="details-frame">
+
           <button class="hide-button" onclick="hideDetails()">hide details</button>
       <img src="cakes/Fun-Cakes-20220414-Festival_Wedding_cake-01-600x400.jpg"class="details-image">
       <span class="details-title">
         XXXXXXXXX
       </span>
+      <audio class="audio-music" src=""></audio>
     </div>
     </section>
     <ul class="thumbnails-list">
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/Fun-Cakes-20220414-Festival_Wedding_cake-01-600x400.jpg" data-details-title="Chokolate cake with berries">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/Fun-Cakes-20220414-Festival_Wedding_cake-01-600x400.jpg" data-details-title="Chokolate cake with berries" data-details-audio="audio/audio1.mp3">
           <img src="cakes/Fun-Cakes-20220414-Festival_Wedding_cake-01-600x400.jpg"   class="thumbnails-image" >
-          <audio src="audio/audio1.mp3" class="audio"></audio>
           <span class="thumbnails-title">Berries</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/amazing-maltesers-cake-74777-1.jpeg" data-details-title="Cake with chokolate bolls">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/amazing-maltesers-cake-74777-1.jpeg" data-details-title="Cake with chokolate bolls" data-details-audio="audio/audio2">
           <img src="cakes/amazing-maltesers-cake-74777-1.jpeg"  class="thumbnails-image" >
-          <audio src="audio/audio2.mp3" class="audio"></audio>
           <span class="thumbnails-title">Bolls</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/funfetti_cake_49993_16x9.jpg" data-details-title="Sweet cake">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/funfetti_cake_49993_16x9.jpg" data-details-title="Sweet cake" data-details-audio="audio/audio3">
           <img src="cakes/funfetti_cake_49993_16x9.jpg" class="thumbnails-image" >
-          <audio src="audio/audio3.mp3" class="audio"></audio>
           <span class="thumbnails-title">Sweet</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/image_gallery_llamacake@2x.jpg" data-details-title="Lama cake">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/image_gallery_llamacake@2x.jpg" data-details-title="Lama cake" data-details-audio="audio/audio4">
           <img src="cakes/image_gallery_llamacake@2x.jpg" class="thumbnails-image">
-          <audio src="audio/audio4.mp3" class="audio"></audio>
           <span class="thumbnails-title">Lama</span>
         </a>
     </li>
     <li class="thumbnails-item">
-          <a href="#" class="thumbnails-anchor" data-details-image="cakes/IMG_1725.jpg" data-details-title="Blue cake with flowers">
+          <a href="#" class="thumbnails-anchor" data-details-image="cakes/IMG_1725.jpg" data-details-title="Blue cake with flowers" data-details-audio="audio/audio5">
             <img src="cakes/IMG_1725.jpg"  class="thumbnails-image">
-            <audio src="audio/audio1.mp5" class="audio"></audio>
             <span class="thumbnails-title">Blue</span>
           </a>
         </li>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake6.jpg" data-details-title="White cake with berries">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake6.jpg" data-details-title="White cake with berries" data-details-audio="audio/audio6">
           <img src="cakes/cake6.jpg"  class="thumbnails-image">
-          <audio src="audio/audio6.mp3" class="audio"></audio>
           <span class="thumbnails-title">White</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake7.jpg" data-details-title="Chokolate caramel cake">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake7.jpg" data-details-title="Chokolate caramel cake" data-details-audio="audio/audio7">
           <img src="cakes/cake7.jpg"  class="thumbnails-image">
-          <audio src="audio/audio7.mp3" class="audio"></audio>
           <span class="thumbnails-title">Caramel</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake8.webp" data-details-title="Unicorn cake">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake8.webp" data-details-title="Unicorn cake" data-details-audio="audio/audio8">
           <img src="cakes/cake8.webp"  class="thumbnails-image">
-          <audio src="audio/audio8.mp3" class="audio"></audio>
           <span class="thumbnails-title">Unicorn</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor"data-details-image="cakes/cake9.jpg" data-details-title="Cheesecake with berries">
+        <a href="#" class="thumbnails-anchor"data-details-image="cakes/cake9.jpg" data-details-title="Cheesecake with berries" data-details-audio="audio/audio9">
           <img src="cakes/cake9.jpg"  class="thumbnails-image">
-          <audio src="audio/audio9.mp3" class="audio"></audio>
           <span class="thumbnails-title">Cheesecake</span>
         </a>
       </li>
       <li class="thumbnails-item">
-        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake10.jpg" data-details-title="Funny cake with sweets">
+        <a href="#" class="thumbnails-anchor" data-details-image="cakes/cake10.jpg" data-details-title="Funny cake with sweets" data-details-audio="audio/audio10">
           <img src="cakes/cake10.jpg"  class="thumbnails-image">
-          <audio src="audio/audio10.mp3" class="audio"></audio>
           <span class="thumbnails-title">Funny</span>
         </a>
       </li>
