@@ -126,6 +126,16 @@ body {
         transition: 0s; 
    }
    
+   .play {
+    position: absolute;
+    left: 0vw;
+    top: 10vw;
+}
+.pause {
+    position: absolute;
+    right: 0vw;
+    bottom: 10vw;
+}
     @media (min-width: 560px) {
         
     :root {
