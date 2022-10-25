@@ -7,18 +7,19 @@ const detailsContainer = document.querySelector(".details-container");
 const audio = document.querySelector(".audio-music");
 const HIDDEN = "hidden";
 const IS_POINT = "is-point";
+
 function setDetails(anchor) {
     detailsImage.setAttribute('src', anchor.getAttribute('data-details-image'));
     detailsTitle.innerHTML = anchor.getAttribute('data-details-title');
     pauseAudio(1);
-    audio.setAttribute('src', anchor.getAttribute('data-details-audio'));
+    audio.setAttribute("src", anchor.getAttribute('data-details-audio'));
 }
 
 for(let i = 0; i < anchors.length; i++) {
     anchors[i].addEventListener("click", function() {
         console.log("event - click on ", anchors[i]);
-        showDetails();
         setDetails(anchors[i]);
+        showDetails();
     })
 }
 function showDetails() {
@@ -26,7 +27,7 @@ function showDetails() {
     detailsContainer.classList.add(IS_POINT);
     setTimeout(function() {
         detailsContainer.classList.remove(IS_POINT);
-    },1)
+    },1);
 
     playAudio();
     pauseAudio(5000);
@@ -36,15 +37,13 @@ function hideDetails() {
     pauseAudio(1);
 }
 function playAudio() {
-    setTimeout(function() {
+    setTimeout(function () {
         audio.play();
-       
-
-    },1)
+//        audio.loop=true;
+    }, 1);
 }
-function pauseAudio(msecs){
-    setTimeout(function() {
+function pauseAudio(msecs) {
+    setTimeout(function () {
         audio.pause();
-    }, msecs)
-       
+    }, msecs);
 }
