@@ -125,6 +125,9 @@ body {
         transform: scale(0.001);  
         transition: 0s; 
    }
+   .audio {
+    
+   }
     @media (min-width: 560px) {
         
     :root {
