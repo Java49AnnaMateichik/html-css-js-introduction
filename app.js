@@ -4,7 +4,7 @@ function sumDigits(number) {
      if (number < 0){
         number *= -1;
      }
-    var sum = 0, rest;
+    let sum = 0, rest;
     while (number) {
         rest = number % 10;
         number = (number - rest) / 10;
