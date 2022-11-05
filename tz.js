@@ -4,7 +4,7 @@ const maxDidit= 9;
 const char0 = '0'.charCodeAt();
 
 function checkTZ(tzStr) {
-     if(tzStr.length != nineDigits.length || isNan(+tzStr)) {
+     if(tzStr.length != nineDigits.length || isNan(+tzStr)) { //tz must have 9 digits
         console.log("TZ=",tzStr,'valid=',false);
         return false;
      }
