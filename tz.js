@@ -74,7 +74,7 @@ function getRandomIntegerValue(min, max) {
 
 
 checkTZ('342727849');
-// checkTZ('9786555456');
-// checkTZ('324663442');
-// checkTZ('gf2465');
-// generateTZ();
+checkTZ('9786555456');
+checkTZ('324663442');
+checkTZ('gf2465');
+generateTZ();
