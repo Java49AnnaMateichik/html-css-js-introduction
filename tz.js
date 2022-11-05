@@ -4,7 +4,7 @@ const maxDidit= 9;
 const char0 = '0'.charCodeAt();
 
 function checkTZ(tzStr) {
-     if(tzStr.length != nineDigits.length || isNan(+tzStr)) { //tz must have 9 digits
+    if(tzStr.length != nineDigits.length || isNaN(+tzStr)) { //tz must have 9 digits
         console.log("TZ=",tzStr,'valid=',false);
         return false;
      }
@@ -16,7 +16,7 @@ function checkTZ(tzStr) {
 
 function getControlSum(tzStr) {
     let array = Array.from(tzStr).map(function(symbol, ind){
-        let value = symbol.charCodeAt() - char0;
+        let value = symbol.charCodeAt() - char0; // make num from str
         return ind % 2 == 0 ? getEvenValue(value) : getOddValue(value*2);
     });
     return array.reduce(function(sum,cur){
@@ -53,7 +53,7 @@ function getGeneratedArray() {
     });
 }
 
-function intArray2Str(array) {
+function intArray2Str(array) {     //from num to str
 return array.reduce(function(str, cur) {
     return str + String.fromCharCode(cur + char0);
 }, "");
@@ -75,7 +75,7 @@ function getRandomIntegerValue(min, max) {
 
 
 checkTZ('342727849');
-checkTZ('9786555456');
-checkTZ('324663442');
-checkTZ('gf2465');
-generateTZ();
+// checkTZ('9786555456');
+// checkTZ('324663442');
+// checkTZ('gf2465');
+//generateTZ();
