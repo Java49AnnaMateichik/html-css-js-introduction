@@ -53,7 +53,7 @@ function getGeneratedArray() {
     });
 }
 
-function intArray2Str(array) {     //from num to str
+function intArray2Str(array) {     //from num to     
 return array.reduce(function(str, cur) {
     return str + String.fromCharCode(cur + char0);
 }, "");
