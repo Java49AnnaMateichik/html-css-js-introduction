@@ -22,6 +22,7 @@ function getControlSum(tzStr) {
     return array.reduce(function(sum,cur){
         return sum+cur;
     },0);
+}
 //     return Array.from(tzStr).map(function(symbol, ind){
 //         let value = symbol.charCodeAt() - char0;
 //         return ind % 2 == 0 ? getEvenValue(value) : getOddValue(value*2);
