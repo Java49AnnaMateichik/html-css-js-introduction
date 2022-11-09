@@ -15,7 +15,7 @@ function ulSurround(strings) {
         return '<li>' + element + '</li>';
     });
     str.splice(0, 0, '<ul>');
-    str.splice(strings.length, 0, '</ul>');
+    str.splice(str.length, 0, '</ul>');
     return str;
 
 }
