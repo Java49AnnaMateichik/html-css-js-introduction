@@ -6,6 +6,7 @@
 // 1.3. Example: minMax([1, 2, 3, 4, 5]) returns array [1, 5]
 // 1.4. Implementation Requirements
 // 1.4.1. Apply the reduce pattern for getting result array by one “reduce” method
+
 let arr = [1,2,3,4,5,];
 console.log(` array 1 = ${arr}`);
 function minMax(numbers) {
@@ -21,7 +22,7 @@ function minMax(numbers) {
     },[arr[0],arr[0]]);
 }
 console.log(` minMax =  ${minMax(arr)}`);
-
+//-------------------------------------------------------------------------------------------------
 // 2.
 // Write function deleteWithPrefix(strings, prefix)
 // 2.1.Takes array of strings and a prefix value
@@ -35,7 +36,7 @@ function deleteWithPrefix(strings, prefix){
     return strings.filter(str => !str.startsWith(prefix));
 }
 console.log(`array -  ${strings}, prefix -  ${prefix}, array with prefix -  ${deleteWithPrefix(strings, prefix)}`);
-  
+  //------------------------------------------------------------------------------------------------------------------------------
 
 // 3.
 // Write function getSortedEvenOdd(numbers)
@@ -55,8 +56,8 @@ function getSortedEvenOdd(numbers){
     let odd = numbers.filter((n) => n % 2 > 0);
     let sortedE = even.sort((a,b) => a-b);
     let sorted = odd.sort((a,b) => b-a);
-   
-    return sortedE.splice(sortedE.length, 0 ,sorted);
+    sortedE.push(sorted);
+    return sortedE;
 
 }
 console.log(`unsorted arrey - ${numbers}, sorted - ${getSortedEvenOdd(numbers)}`);
