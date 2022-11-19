@@ -3,10 +3,10 @@ const answer = ["java", "length","css","array"];
 "language for describing the presentation of Web pages, including colors, layout, and fonts",
 "a collection of elements of the same type placed in contiguous memory locations that can be individually referenced by using an index to a unique identifier"];
 
-const words =[ ["programing language","java"],
- ["a property of arrays in JavaScript that returns or sets the number of elements in a given array","length"],
- ["language for describing the presentation of Web pages, including colors, layout, and fonts","css"],
- ["a collection of elements of the same type placed in contiguous memory locations that can be individually referenced by using an index to a unique identifier","array"]
+const words =[ ["programing language", "java"],
+ ["a property of arrays in JavaScript that returns or sets the number of elements in a given array", "length"],
+ ["language for describing the presentation of Web pages", "css"],
+ ["a collection of elements of the same type placed in contiguous memory locations that can be individually referenced by using an index to a unique identifier", "array"]
 ];
 
 let word;
@@ -15,12 +15,12 @@ let prevInd = -1;
 let searchWordAr = [];
 const sectionElement = document.querySelector(".word-guess");
 let searchWordArLen = 0;
-sectionElement.innerHTML = getDivsElements();
-const letterElements = document.querySelectorAll(".letter-guess");
-const trialNumElement = document.querySelector(".tial-number");
-const trialsElement = document.querySelector(".word-trials");
+//sectionElement.innerHTML = getDivsElements();
+let letterElements = document.querySelectorAll(".letter-guess");
+const trialNumElement = document.querySelector(".trial-number");
+const trialsElement = document.querySelector(".word-trial");
 const gameOverElement = document.querySelector(".game-over-message");
-const invintationElement = document.querySelector(".guess-invintation");
+const invintationElement = document.querySelector(".guess-invimtation");
 //const playAgainElement = document.getElementById("play-again");
 
 let flGameOver = false;
@@ -32,7 +32,7 @@ function getDivsElements() {
    console.log('word=', words[index][1]);
    word = words[index][1];
     //let wordField = words[index];
-    searchWordAr = Array.from(word );
+    searchWordAr = Array.from(word);
     let res = searchWordAr.map(letter => `<div class="letter-guess">${letter}</div>`);
     return res.join('');
 }
@@ -55,20 +55,21 @@ function showTrialsMessage(trials,word) {
 }
 
 function startGame() {
-    if(flGameOver){
+  //  if(flGameOver){
         sectionElement.innerHTML = getDivsElements();
+        letterElements = document.querySelectorAll(".letter-guess");
         flGameOver = false;
-    }
+ //   }
     trials = 0;
     searchWordArLen = 0;
     flGameOver = false;
-    gameOverElement.innerHTML = "";
-    invintationElement.innerHTML = `Guess the word as ${words[index][0]}`;
+    gameOverElement.innerHTML ="";
+    invintationElement.innerHTML = `Guess the word as "${words[index][0]}"`;
     //letterElements[2].style.background="white"
 }
 
 function onChange(event) {
-    const wordGuess = event.target.value.toLowerCase();
+    let wordGuess = event.target.value.toLowerCase();
     event.target.value = '';
     if (flGameOver) {
         alert("game is over");
@@ -82,10 +83,10 @@ function onChange(event) {
     })
     colors.forEach((color,index) => {
         if(color === 'white') {
-            if(letterElements[index].style.background !== 'white') {
+           // if(letterElements[index].style.background !== 'white') {
                 searchWordArLen++;
-                letterElements[index].style.background = c;
-            } 
+                letterElements[index].style.background = color;
+            //} 
         }
     });
     if(searchWordArLen === searchWordAr.length) {
@@ -115,7 +116,7 @@ function onChange(event) {
     // }
     
 function endGame(isSuccess) {
-    if (isSuccess) {
+    if(isSuccess) {
         gameOverElement.innerHTML =  `Congratulations you're winner. Amount of trials is ${trials}`;
         gameOverElement.style.color = "green"
         invintationElement.innerHTML = '';
