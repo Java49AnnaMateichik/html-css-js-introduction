@@ -18,7 +18,7 @@ let searchWordArLen = 0;
 sectionElement.innerHTML = getDivsElements();
 const letterElements = document.querySelectorAll(".letter-guess");
 const trialNumElement = document.querySelector(".tial-number");
-const trialsElement = document.querySelector(".guess-trials");
+const trialsElement = document.querySelector(".word-trials");
 const gameOverElement = document.querySelector(".game-over-message");
 const invintationElement = document.querySelector(".guess-invintation");
 //const playAgainElement = document.getElementById("play-again");
@@ -77,8 +77,8 @@ function onChange(event) {
     trials++;
     showTrialsMessage(trials,wordGuess);
     const wordAr = Array.from(wordGuess); 
-    let colors = searchWordAr.map((1) => {
-        return wordAr.includes(1) ? 'white' : 'black';
+    let colors = searchWordAr.map((l) => {
+        return wordAr.includes(l) ? 'white' : 'black';
     })
     colors.forEach((color,index) => {
         if(color === 'white') {
