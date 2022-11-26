@@ -36,6 +36,27 @@ function displayOccurrences(strings) {
 //  console.log(x);
 const strings = ["a","opr","lmn", "abc", "lmn","abc", "lmn", "lmn", "abc", "a"];
 displayOccurrences(strings);
+//=======================================================================================================================================================
+
+console.log("=======================================================================");
+
+   //============================cw19================================================================================================================
 
 
-
+function createEmployee(id, name, birthYear, salary) {
+    return {id, name, birthYear, salary};
+}
+const empl1 = createEmployee(123, "Vasya", 2000, 10000);
+const empl2 = empl1;
+console.log(empl1==empl2); //true
+function updateSalary(empl1, newSalary) {
+    empl1 = createEmployee(123, "Vasya", 2000, newSalary)
+}
+updateSalary(empl1, 15000);
+console.log("empl1",empl1); //=>empl1 { id: 123, name: 'Vasya', birthYear: 2000, salary: 10000 }
+function updateSalaryPrimitive(salary, newSalary) {
+    salary = newSalary;
+}
+let salary = 10000;
+updateSalaryPrimitive(salary, 20000);
+console.log("salary", salary); //=> 10000
