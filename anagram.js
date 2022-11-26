@@ -21,8 +21,7 @@ function symbolProcessing(res, cur){
 }
 function GetSymbolOccurrences(string){
     const stringArray = Array.from(string);
-     return stringArray.reduce(symbolProcessing
-     ,{});
+     return stringArray.reduce(symbolProcessing ,{});
 }
 
 function checkAnagram(occurrences,string){

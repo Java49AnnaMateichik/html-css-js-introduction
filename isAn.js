@@ -34,7 +34,7 @@
 // we don’t need an additional check of the occurrences objects created in 4.2)
 
 
-function displayOccurrences(strings) {
+function symbolOccurrences(strings) {
     let strAr = Array.from(strings);
     let occurrences = {};
     strAr.forEach(element => {
@@ -52,21 +52,24 @@ function isAnagram(str1, str2){
     }
 // get them to arrays+lower case
 let arr2 = Array.from(str2.toLowerCase());
-let occurrences1 = displayOccurrences(str1.toLowerCase());
+let occurrences1 = symbolOccurrences(str1.toLowerCase());
+let i=0;
+let res = true;
 arr2.forEach(i => {
-    if(occurrences1[arr2[i]] == undefined){
-        return false;
+  
+    if(occurrences1[i] == undefined){
+       res = false;
     }
-    if(--occurrences1[arr2[i]] < 0){
-        return false;
+    if(--occurrences1[i] < 0){
+        res =  false;
     }
     
 })
-    return true;
+return res; 
 
 }
 let str1 ="yellow";
-//true
+true
 console.log(isAnagram(str1, "weloly"));
 console.log(isAnagram(str1, "leloyw"));
 console.log(isAnagram(str1, "wolley"));
